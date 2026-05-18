@@ -8,7 +8,7 @@ def db_connect():
             database=DBNAME,
             user=DBUSER,
             password=DBPASSWORD,
-            # port=DBPORT
+            port=DBPORT
         )
     except Exception as e:
         print("Error while connecting to DB: ", e)
