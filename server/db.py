@@ -1,5 +1,6 @@
 from mysql.connector import connect
 from server.constant import DBHOST, DBNAME, DBPASSWORD, DBUSER, DBPORT
+
 def db_connect():
     try:
         return connect(
