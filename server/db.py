@@ -1,5 +1,5 @@
 from mysql.connector import connect
-from server.constant import DBHOST, DBNAME, DBPASSWORD, DBUSER
+from server.constant import DBHOST, DBNAME, DBPASSWORD, DBUSER, DBPORT
 def db_connect():
     try:
         return connect(
@@ -7,7 +7,7 @@ def db_connect():
             database=DBNAME,
             user=DBUSER,
             password=DBPASSWORD,
-            # port=DBPORT
+            port=DBPORT
         )
     except Exception as e:
         print("Error while connecting to DB: ", e)
