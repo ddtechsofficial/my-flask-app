@@ -1,0 +1,12 @@
+{%extends "base.html"%}
+{%block title%}Update Student{%endblock%}
+{%block content%}
+    <h1>Update</h1>
+    <form action="/update/{{student[0]}}" method="post">
+        <input type="hidden" name="id" value="{{student[0]}}">
+        <input type="text" name="name" value="{{student[1]}}">
+        <input type="text" name="email" value="{{student[2]}}">
+        <input type="text" name="age" value="{{student[3]}}">
+        <input type="submit" name="submit" value="UPDATE">
+    </form>
+{%endblock%}
